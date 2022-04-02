@@ -1,0 +1,56 @@
+.container{
+    position: relative;
+    height: 100vh;
+    background-image: url(https://i.imgur.com/6QT8pRR.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.info{
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    width: 100%;
+}
+.titulo{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+.titulo > h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0ch;
+}
+.titulo > button{
+    background: white;
+    color: inherit;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+@media (min-width: 900px){
+    .container{
+        position: initial;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info{
+        position: initial;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-top: 2rem;
+    }
+    .titulo{
+        position: initial;
+        grid-column: 1 / 2;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+        padding-right: 20%;
+    }
+}

@@ -16,9 +16,10 @@ function App() {
   //* valores en pantalla y uso de su estado
 
   const [ cityName , setCityName  ] = useState('');
-  const [ country, setCountry ] = useState('')
-  const [ weather , setWeather] = useState([])
-  const [ temp , setTemp ] = useState(0)
+  const [ country, setCountry ] = useState('');
+  const [ weather , setWeather] = useState([]);
+  const [ temp , setTemp ] = useState(0);
+  const [ dataAditional , setDataAditional ] = useState({})
 
 
   //! Efecto de la posicion actual
@@ -30,6 +31,8 @@ function App() {
       setCountry(res.data.sys.country)
       setWeather(res.data.weather)
       setTemp(res.data.main.temp)
+      setDataAditional(res.data)
+      
     }).catch((error) =>{
       console.log('Debes aceptar terminos')
     })
@@ -38,7 +41,7 @@ function App() {
     
   return (
     <div className="App">
-      <AppClima cond={lati} name={cityName} country={country} weather={weather} temp={temp}/>
+      <AppClima cond={lati} name={cityName} country={country} weather={weather} temp={temp} dataA={dataAditional}/>
     </div>
   );
 }

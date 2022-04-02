@@ -1,0 +1,45 @@
+.weather-principal{
+    background-color: rgba(255,255,255,.6);
+    margin: 0 5%;
+    height: 50vh;
+    border-radius: 2rem;
+    padding-top: 1rem;
+}
+.weather-principal > h2{
+    margin: 0;
+    color: green;
+}
+.icon{
+    color: white;
+    padding: 0 0 0 1rem;
+    font-size: 2.5rem;
+}
+.weather-principal > p{
+    color: green;
+    font-size: 2rem;
+    margin: 1rem 0 0 0;
+}
+.data-name{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+.data-name > li{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    color: green;
+}
+.data-name > li > span{
+    color: white;
+}
+@media (min-width: 900px){
+    .weather-principal{    
+        height: 90vh;
+    }
+    .data-name > li{
+        padding: 2rem 0;
+    }
+}
