@@ -30,7 +30,9 @@ const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
     //! Renderizado Condicional
     if(cond === 0){
         return(
-            <h2>Hola</h2>
+            <div className="load">
+                <div className="spiner"></div>
+            </div>
         )
     }else{
         return(

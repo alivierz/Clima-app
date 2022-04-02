@@ -54,3 +54,40 @@
         padding-right: 20%;
     }
 }
+
+.load{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: green;
+}
+.spiner{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    align-self: center;
+    margin-top: 20%;
+    border-radius: 50%;
+    animation-name: colorful;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes colorful{
+    0%{
+        width: 150px;
+        height: 150px;
+        background-color: white;
+    }
+    50%{
+        width: 250px;
+        height: 250px;
+        background-color: yellowgreen;
+    }
+    100%{
+        width: 150px;
+        height: 150px;
+        background-color: white;
+    }
+}
