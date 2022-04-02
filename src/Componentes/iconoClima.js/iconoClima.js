@@ -3,7 +3,7 @@ import { faCloud , faSun , faCloudRain , faThunderstorm , faSnowman , faTint, fa
 import './iconoClima.css'
 
 const IconoClima = ({pic, desc, data}) => {
-
+    
     if(pic === 'Clouds'){
         return(
             <div className="weather-principal">
@@ -39,7 +39,7 @@ const IconoClima = ({pic, desc, data}) => {
                     <li>Wind-Speed: <span>{data.wind.speed}</span></li>
                 </ul>              
             </div>
-            )
+            ) 
     }else if(pic === 'Thunderstorm'){
         return(
             <div className="weather-principal">
@@ -53,7 +53,7 @@ const IconoClima = ({pic, desc, data}) => {
             </div>
             )
     }else if(pic === 'Drizzle'){
-        return(
+        return( 
             <div className="weather-principal">
                 <h2>{pic} <FontAwesomeIcon icon={faTint}/></h2> 
                 <p>{desc}</p>                
@@ -88,7 +88,7 @@ const IconoClima = ({pic, desc, data}) => {
                 </ul>              
             </div>
             )
-    }
+    } 
     
 }
 export default IconoClima

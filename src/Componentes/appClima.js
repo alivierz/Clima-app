@@ -5,12 +5,12 @@ import './appClima.css'
 
 const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
 
-
+    //! Variable constante cambio de fondo
+    const climaActual = weather.map((clima) => clima.main);
     //? Estados de los elementos
     const [ type , setType] = useState('C')
-    const [ databoton , setDataBoton ] = useState('Faren')
+    const [ databoton , setDataBoton ] = useState('Faren');
 
-    
     //*Lista de climas
     const icon = weather.map((clima) => <IconoClima pic={clima.main} desc={clima.description} data={dataA} key={clima.id}/>)
 
@@ -25,7 +25,7 @@ const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
             setDataBoton('Faren')
         }
     }
-
+    
 
     //! Renderizado Condicional
     if(cond === 0){
@@ -36,7 +36,7 @@ const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
         )
     }else{
         return(
-        <div className="container">
+        <div className={`container ${climaActual[0]}`}>
            <div className="info">
             {icon}
            </div>
