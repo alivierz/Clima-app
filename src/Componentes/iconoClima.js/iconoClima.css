@@ -17,7 +17,7 @@
 .weather-principal > p{
     color: green;
     font-size: 2rem;
-    margin: 1rem 0 0 0;
+    margin: 0;
 }
 .data-name{
     display: flex;
@@ -25,6 +25,7 @@
     list-style: none;
     padding: 0;
     align-items: center;
+    margin: 0;
 }
 .data-name > li{
     font-size: 1.4rem;
