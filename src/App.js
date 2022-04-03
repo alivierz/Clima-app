@@ -26,7 +26,6 @@ function App() {
  
     useEffect(() =>{
     map(lati, long).then((res) =>{
-      console.log(res.data)
       setCityName(res.data.name)
       setCountry(res.data.sys.country)
       setWeather(res.data.weather)
