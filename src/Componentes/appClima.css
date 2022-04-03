@@ -1,6 +1,7 @@
 .container{
     position: relative;
     height: 100vh;
+    max-height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -30,7 +31,6 @@
     border: none;
     border-radius: 1rem;
     padding: 1rem 2rem;
-    margin-top: 1rem;
     font: inherit;
     cursor: pointer;
     outline: inherit;
