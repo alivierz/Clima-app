@@ -9,14 +9,15 @@
 }
 .info{
     position: absolute;
-    top: 5%;
+    top: 0;
     text-align: center;
     width: 100%;
-    padding: 0;
+    padding: 5% 0 0 0;
 }
 .titulo{
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
+    padding-bottom: 10%;
     width: 100%;
     text-align: center;
 }
@@ -46,6 +47,7 @@
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         margin-top: 2rem;
+        padding-top: 0;
     }
     .titulo{
         position: initial;
@@ -53,6 +55,7 @@
         align-self: flex-end;
         margin-bottom: 2rem;
         padding-right: 20%;
+        padding-bottom: 0;
     }
 }
 
