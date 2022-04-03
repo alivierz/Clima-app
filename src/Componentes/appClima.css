@@ -11,19 +11,18 @@
     top: 5%;
     text-align: center;
     width: 100%;
-    padding:0 0 1rem 0;
+    padding: 0;
 }
 .titulo{
     position: absolute;
     bottom: 5%;
     width: 100%;
     text-align: center;
-    padding-top: 1rem;
 }
 .titulo > h2 {
     color: white;
     font-size: 1.8rem;
-    margin: 0ch;
+    margin: 0;
 }
 .titulo > button{
     background: white;
