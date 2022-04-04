@@ -1,11 +1,11 @@
 .container{
     position: relative;
     height: 100vh;
-    max-height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: yellowgreen;
+    overflow: hidden;
 }
 .info{
     position: absolute;

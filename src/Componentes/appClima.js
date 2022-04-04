@@ -3,8 +3,9 @@ import ChangeTemp from "./changeTemp/changeTemp";
 import { useState } from "react";
 import './appClima.css'
 
-const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
+const AppClima = ({name, country, weather, temp, dataA, render}) =>{
 
+    console.log(render)
     //! Variable constante cambio de fondo
     const climaActual = weather.map((clima) => clima.main);
     //? Estados de los elementos
@@ -26,27 +27,27 @@ const AppClima = ({cond, name, country, weather, temp, dataA}) =>{
         }
     }
     
-
+    console.log(climaActual)
     //! Renderizado Condicional
-    if(cond === 0){
+    if(render){
+        return(
+            <div className={`container ${climaActual[0]}`}>
+               <div className="info">
+                {icon}
+               </div>
+               <div className="titulo">
+                    <h2>{`${name} - ${country}`}</h2>
+                    <ChangeTemp temp={temp} mood={type}/>
+                    <button onClick={changeAll}>Change {databoton}</button>  
+                </div>       
+            </div>
+        )
+    }else{
         return(
             <div className="load">
                 <div className="spiner"></div>
             </div>
         )
-    }else{
-        return(
-        <div className={`container ${climaActual[0]}`}>
-           <div className="info">
-            {icon}
-           </div>
-           <div className="titulo">
-                <h2>{`${name} - ${country}`}</h2>
-                <ChangeTemp temp={temp} mood={type}/>
-                <button onClick={changeAll}>Change {databoton}</button>  
-            </div>       
-        </div>
-    )
     }
     
 }

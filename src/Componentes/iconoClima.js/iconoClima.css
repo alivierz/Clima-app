@@ -1,7 +1,7 @@
 .weather-principal{
     background-color: rgba(255,255,255,.6);
     margin: 0 5%;
-    height: 50vh;
+    height: auto;
     border-radius: 2rem;
     padding: 1rem 0;
 }
