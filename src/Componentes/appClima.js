@@ -5,7 +5,6 @@ import './appClima.css'
 
 const AppClima = ({name, country, weather, temp, dataA, render}) =>{
 
-    console.log(render)
     //! Variable constante cambio de fondo
     const climaActual = weather.map((clima) => clima.main);
     //? Estados de los elementos
@@ -14,7 +13,6 @@ const AppClima = ({name, country, weather, temp, dataA, render}) =>{
 
     //*Lista de climas
     const icon = weather.map((clima) => <IconoClima pic={clima.main} desc={clima.description} data={dataA} key={clima.id}/>)
-
 
     //? Funciones
     const changeAll = () =>{
@@ -27,7 +25,6 @@ const AppClima = ({name, country, weather, temp, dataA, render}) =>{
         }
     }
     
-    console.log(climaActual)
     //! Renderizado Condicional
     if(render){
         return(
